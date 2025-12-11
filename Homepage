@@ -1,1 +1,60 @@
 app/page.tsx
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Crown, Trophy, Zap, Users } from "lucide-react"
+
+export default function Home() {
+  return (
+    <>
+      <div className="min-h-screen bg-black text-white">
+        {/* Hero Section */}
+        <div className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-purple-900 via-black to-black">
+          <div className="text-center z-10 px-6">
+            <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
+              NICHEHUBB
+            </h1>
+            <p className="text-xl md:text-3xl mb-8 text-gray-300">
+              The Pornhub of Sports<br />
+              Training • Scores • Fan Clubs • Contracts
+            </p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-xl px-10">
+                <Trophy className="mr-2 h-6 w-6" />
+                Join as Athlete
+              </Button>
+              <Button size="lg" variant="outline" className="text-xl px-10 border-white hover:bg-white hover:text-black">
+                <Users className="mr-2 h-6 w-6" />
+                Explore Athletes
+              </Button>
+            </div>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+        </div>
+
+        {/* Features */}
+        <div className="py-20 px-6 max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-bold text-center mb-16">
+            Built for Winners
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="bg-gray-900 border-gray-800 p-8 text-center">
+              <Zap className="h-16 w-16 text-purple-500 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-3">Strava & Garmin Auto-Import</h3>
+              <p className="text-gray-400">Your workouts become premium content automatically</p>
+            </Card>
+            <Card className="bg-gray-900 border-gray-800 p-8 text-center">
+              <Crown className="h-16 w-16 text-yellow-500 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-3">Fan Club Subscriptions</h3>
+              <p className="text-gray-400">Earn thousands per month from your fans</p>
+            </Card>
+            <Card className="bg-gray-900 border-gray-800 p-8 text-center">
+              <Trophy className="h-16 w-16 text-green-500 mx-auto mb-4" />
+              <h3 className="text-2xl font-bold mb-3">Real Contracts & Offers</h3>
+              <p className="text-gray-400">Agents and clubs can sign you directly</p>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
